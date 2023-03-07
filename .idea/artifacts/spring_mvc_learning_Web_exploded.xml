@@ -2,11 +2,10 @@
   <artifact type="exploded-war" name="spring-mvc-learning:Web exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/spring_mvc_learning_Web_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="spring-mvc-learning/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="javaee-facet-classes" facet="spring-mvc-learning/web/Web" />
           <element id="module-output" name="spring-mvc-learning" />
+          <element id="javaee-facet-classes" facet="spring-mvc-learning/web/Web" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:6.0.6" />
@@ -22,6 +21,7 @@
           <element id="library" level="project" name="Maven: jakarta.servlet:jakarta.servlet-api:6.0.0" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="spring-mvc-learning/web/Web" />
     </root>
   </artifact>
 </component>

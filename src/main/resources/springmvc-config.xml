@@ -15,16 +15,49 @@
 
 <!--    将图片/JS/CSS等静态资源排除在外，可提高执行效率-->
     <mvc:default-servlet-handler/>
+    
 
-<!--    让 MVC 的注解生效-->
-    <mvc:annotation-driven/>
-
-    <!--    视图解析器-->
+<!--    启用 Spring MVC 的注解开发模式-->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/html;charset=utf-8</value>
+                        <value>application/json;charset=utf-8</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+    
+<!--    定义视图解析器-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="contentType" value="text/html;charset=utf-8"/>
-        <property name="suffix" value=".jsp"/>
+<!--        设置前缀-->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+<!--        设置后缀-->
+        <property name="suffix" value=".jsp" />
     </bean>
 
-<!--    <bean id-->
+<!--        视图解析器-->
+<!--    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+<!--        <property name="contentType" value="text/html;charset=utf-8"/>-->
+<!--        <property name="suffix" value=".jsp"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">-->
+<!--        <property name="contentType" value="text/html;charset=utf-8"/>-->
+<!--        <property name="suffix" value=".ftl"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">-->
+<!--        <property name="templateLoaderPath" value="/WEB-INF/ftl"/>-->
+<!--        <property name="freemarkerSettings">-->
+<!--            <props>-->
+<!--                <prop key="defaultEncoding">UTF-8</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--    </bean>-->
 
 </beans>

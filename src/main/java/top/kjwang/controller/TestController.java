@@ -1,9 +1,9 @@
 package top.kjwang.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import top.kjwang.entity.User;
 
 /**
  * @author kjwang
@@ -21,7 +21,7 @@ public class TestController {
     @GetMapping("/getUser")
     public User getUser() {
         User user = new User();
-        user.setName("咪咪");
+        user.setUsername("咪咪");
         user.setPassword("123");
         return user;
     }

@@ -12,16 +12,19 @@
 <!--    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>-->
 <!--    适配器，配置对处理器中 handleRequest()方法的调用-->
 <!--    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>-->
-<!--    视图解析器-->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
-
 
 <!--    将图片/JS/CSS等静态资源排除在外，可提高执行效率-->
-<!--    <mvc:default-servlet-handler/>-->
+    <mvc:default-servlet-handler/>
 
 <!--    让 MVC 的注解生效-->
     <mvc:annotation-driven/>
+
+    <!--    视图解析器-->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="contentType" value="text/html;charset=utf-8"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+<!--    <bean id-->
+
 </beans>

@@ -1,17 +1,17 @@
-package top.kjwang.controller;
+package top.kjwang.entity;
 
 /**
  * @author kjwang
  * @Date 2023/3/7 14:36
  */
 public class User {
-    String name;
+    String userName;
     String password;
 
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
@@ -19,12 +19,12 @@ public class User {
     public User() {
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String name) {
+        this.userName = name;
     }
 
     public String getPassword() {

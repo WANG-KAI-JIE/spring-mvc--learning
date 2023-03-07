@@ -37,6 +37,12 @@ public class Person {
         this.birthDay = birthDay;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", birthDay=" + birthDay +
+                '}';
+    }
 }

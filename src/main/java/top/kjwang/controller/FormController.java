@@ -16,11 +16,11 @@ import java.util.List;
 public class FormController {
     @PostMapping(value = "/form",produces = "text/html;charset=utf-8")
     @ResponseBody
-    public String form(@RequestParam(value = "name",defaultValue = "ANON") String name,String course,@RequestParam List<Integer> purpose){
+    public String form(@RequestParam(value = "name",defaultValue = "ANON") String name,String course,@RequestParam List<String> purpose){
         System.out.println(name);
         System.out.println(course);
         String str = null;
-        for (Integer s : purpose) {
+        for (String s : purpose) {
             System.out.println(s);
 //            switch (s) {
 //                case 1:

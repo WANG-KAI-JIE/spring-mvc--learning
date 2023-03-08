@@ -39,7 +39,7 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-<!--        视图解析器-->
+<!--&lt;!&ndash;        视图解析器&ndash;&gt;-->
 <!--    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
 <!--        <property name="contentType" value="text/html;charset=utf-8"/>-->
 <!--        <property name="suffix" value=".jsp"/>-->
@@ -60,4 +60,23 @@
 <!--        </property>-->
 <!--    </bean>-->
 
+<!--    显示的装配自定义类型转换器-->
+<!--    <mvc:annotation-driven conversion-service="conversionService"/>-->
+<!--&lt;!&ndash;    自定义类型转换器配置&ndash;&gt;-->
+<!--    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">-->
+<!--        <property name="converters">-->
+<!--            <set>-->
+<!--                <bean class="top.kjwang.convert.DateConverter"/>-->
+<!--            </set>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    自定义类型格式化转换器配置-->
+<!--    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">-->
+<!--        <property name="formatters">-->
+<!--            <set>-->
+<!--                <bean class="top.kjwang.convert.DateFormatter"/>-->
+<!--            </set>-->
+<!--        </property>-->
+<!--    </bean>-->
 </beans>

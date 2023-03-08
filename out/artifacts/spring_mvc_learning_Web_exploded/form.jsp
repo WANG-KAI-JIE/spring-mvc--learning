@@ -28,23 +28,23 @@
     <div>
         <h3>您学习的目的：</h3>
         <label>
-            <input type="checkbox" name="purpose" value="1">
+            <input type="checkbox" name="purpose" value="就业">
             就业
         </label>
         <label>
-            <input type="checkbox" name="purpose" value="2">
+            <input type="checkbox" name="purpose" value="工作需求">
             工作需求
         </label>
         <label>
-            <input type="checkbox" name="purpose" value="3">
+            <input type="checkbox" name="purpose" value="能力提升">
             能力提升
         </label>
         <label>
-            <input type="checkbox" name="purpose" value="4">
+            <input type="checkbox" name="purpose" value="兴趣爱好">
             兴趣爱好
         </label>
         <label>
-            <input type="checkbox" name="purpose" value="5">
+            <input type="checkbox" name="purpose" value="其他">
             其他
         </label>
     </div>
